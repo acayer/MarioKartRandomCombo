@@ -2,6 +2,7 @@ package com.example.mariokartrandomcombo;
 
 import com.example.mariokartrandomcombo.ComboGenerators.*;
 import com.example.mariokartrandomcombo.Model.MK8.*;
+import com.example.mariokartrandomcombo.Model.World.*;
 
 import java.util.List;
 
@@ -26,6 +27,24 @@ public class RandomComboService
         buildCombo.append(" wheels and ");
         buildCombo.append(Gliders8.getByValue(kart.get(2).toString()));
         buildCombo.append(" glider. ");
+
+        return buildCombo.toString();
+    }
+
+    public static String RandomComboMKW()
+    {
+        Integer racer;
+        List<Integer> kart;
+        StringBuilder buildCombo = new StringBuilder();
+
+        MKWComboGenerator generator = new MKWComboGenerator();
+        racer = generator.racerChoice();
+        kart = generator.kartChoice();
+
+        buildCombo.append("Racer: ");
+        buildCombo.append(RacersWorld.getByValue(racer.toString()));
+        buildCombo.append("\nKart: ");
+        buildCombo.append(KartsWorld.getByValue(kart.get(0).toString()));
 
         return buildCombo.toString();
     }

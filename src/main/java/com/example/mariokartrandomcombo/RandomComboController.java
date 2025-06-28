@@ -11,6 +11,11 @@ public class RandomComboController {
     protected void onRandomMK8ButtonClick()
     {
         randomComboText.setText(RandomComboService.RandomComboMK8());
+    }
 
+    @FXML
+    protected void onRandomMKWButtonClick()
+    {
+        randomComboText.setText(RandomComboService.RandomComboMKW());
     }
 }
