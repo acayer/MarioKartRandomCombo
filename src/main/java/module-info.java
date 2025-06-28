@@ -9,4 +9,6 @@ module com.example.mariokartrandomcombo {
     opens com.example.mariokartrandomcombo.ComboGenerators to javafx.fxml;
     exports com.example.mariokartrandomcombo.Model.MK8;
     opens com.example.mariokartrandomcombo.Model.MK8 to javafx.fxml;
+    exports com.example.mariokartrandomcombo.Model.World;
+    opens com.example.mariokartrandomcombo.Model.World to javafx.fxml;
 }
